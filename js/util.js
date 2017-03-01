@@ -6,7 +6,7 @@ const Util = {
                 for (var n in obj) ret[n] = deepClone(obj[n]);
                 return ret;
             case '[object Array]':
-                return obj.map(deepClone);
+                return obj.map(Util.deepClone);
             default:
                 return obj;
         }
